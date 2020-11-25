@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplemente Responsivo</title>
+    <style>
+        .wrapper {
+            /*width: 980px;*/
+            margin: 0 auto;
+        }
+        h1, .normal, .amarillo {
+            padding: 1.4rem;
+            border: 1px solid black;
+        }
+        h1 {
+            /* ese estilo está sobre escrito 4 líneas más abajo */
+            background-color: violet;
+        }
+        h1, .normal {
+            background-color: silver;
+        }
+        .amarillo {
+            background-color: wheat;
+            margin-top: 1.5rem;
+        }
+        #tablet, #movil {
+            display: none;
+        }
+        @media screen and (max-width: 1023px) {
+            #tablet {
+                display: block;
+            }
+            #desktop, #movil {
+               display: none; 
+            }
+        }
+        @media screen and (max-width: 480px) {
+            #movil {
+                display: block;
+            }
+            #desktop, #tablet{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Acá vamos a colocar los elementos -->
+        <h1>@ media queries</h1>
+        <div class="normal">
+            Bootstrap Icons are designed to work best with Bootstrap components, but they’ll work in any project. They’re SVGs, so they scale quickly and easily, can be implemented in several ways, and can be styled with CSS.
+        </div>
+        <div class="amarillo" id="desktop">
+            Desktop: Ancho <b>igual o mayor a 1024px</b>.
+        </div>
+        <div class="amarillo" id="tablet">
+            Tablet: Ancho <b>entre 481px y 1023px</b>
+        </div>
+        <div class="amarillo" id="movil">
+            Movil: Ancho <b>de 480px o inferior</b>
+        </div>
+    </div>
+</body>
+</html>

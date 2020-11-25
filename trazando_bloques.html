@@ -1,0 +1,80 @@
+<html lang="en">
+   <head>
+      <title>Trazando Bloques</title>
+      <style>
+        *{
+          margin: 0px;
+          padding: 0px;
+        }
+        #wrapper{
+          width: 950px;
+          background-color: silver;
+          margin: 0px auto;
+          padding: 20px;
+        }
+        #header{
+          min-height: 150px;
+          background-color: green;
+          margin-bottom: 23px;
+        }
+        #navigation{
+          min-height: 300px;
+          width: 200px;
+          background-color: blue;
+          padding: 20px;
+          display: inline-block; vertical-align: top;
+          margin-right: 10px
+        }
+        #main_content{
+          min-height: 369px;
+          width: 666px;
+          background-color: red;
+          padding: 15px;
+          display: inline-block;
+        }
+        .subcontents{
+          min-height: 190px;
+          width: 210px;
+          background-color: yellow;
+          display: inline-block;
+          margin: 4px;
+        }
+        #advertisement{
+          min-height: 120px;
+          width: 657px;
+          background-color: purple;
+          margin: 4px;
+          margin-top: 21px;
+        }
+        @media screen and (max-width: 1023px){
+          #navigation{
+            display: none;
+          }
+          #main_content{
+            width: 97%;
+          }
+        }
+        @media screen and (max-width: 480px){
+          #navigation{
+            display: none;
+          }
+          .subcontents{
+            display: block;
+          }
+
+        }
+      </style>
+   </head>
+   <body>
+       <div id="wrapper">
+         <div id="header"></div>
+         <div id="navigation"></div>
+         <div id="main_content">
+            <div class="subcontents"></div>
+            <div class="subcontents"></div>
+            <div class="subcontents"></div>
+            <div id="advertisement"></div>
+         </div>
+      </div><!-- end of wrapper -->
+   </body>
+</html>
